@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container {
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin-top: 110px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+.row1{
+  display: flex;
+  margin-left: 400px;
+}
+.row a{
+    text-decoration: underline;
+}
+
+.box {
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #212121;
+  margin: 10px;
+  
+}
+.box1 {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 10px;
+  
+}
+.row1 a{
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.row a{
+  text-decoration: none;
+  color: #212121;
+}
+.box1 {
+ padding: 15px 45px;
+ border: unset;
+ border-radius: 5px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 25px;
+
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.box1::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 35px;
+ background-color: rgb(200, 233, 35);
+ z-index: -1;
+ 
+ transition: all 250ms
+}
+
+.box1:hover {
+ color: white;
+ background:none;
+ 
+}
+
+.box1:hover::before {
+ width: 100%;
+}
+
+.box {
+ padding: 15px 45px;
+ border: unset;
+ border-radius: 5px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 25px;
+ 
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.box::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 35px;
+ background-color: rgb(200, 233, 35);
+ z-index: -1;
+ 
+ transition: all 250ms
+}
+
+.box:hover {
+ color: white;
+ background:none;
+ 
+}
+
+.box:hover::before {
+ width: 100%;
+}
+header{
+        width: 100%;
+        height: 70px;
+        /* background-color: rgb(145, 145, 228); */
+        background-color: rgb(200, 233, 35);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 9px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 150px;
+  background-color: white;
+  box-shadow: 0 0 1px white;
+  z-index: 1;
+}
+
+
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(200, 233, 35);
+    color: white;
+    text-decoration: none;
+}
+.text{
+    position: absolute;
+    top: 100px;
+    left: 382px;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(217, 25, 25);
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+body{
+    /* background-image: url(dora.jpg); */
+    background-color: rgb(234, 237, 239);
+}
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.dot:before,
+.dot:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.dot:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+.wrapper div{
+            height: 60px;
+            width: 60px;
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 70px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            animation: 4s linear infinite;
+        }
+        /* div .dot{
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+            background-color: wheat;
+            position: absolute;
+            top: 20%;
+            right:20%;
+        } */
+        .wrapper div:nth-child(1){
+            top:20%;
+            left:20%;
+            animation: animate 8s linear infinite;
+        }
+        .wrapper div:nth-child(2){
+            top:60%;
+            left:80%;
+            animation: animate 10s linear infinite;
+        }
+        .wrapper div:nth-child(3){
+            top:40%;
+            left:40%;
+            animation: animate 3s linear infinite;
+        }
+        .wrapper div:nth-child(4){
+            top:66%;
+            left:30%;
+            animation: animate 7s linear infinite;
+        }
+        .wrapper div:nth-child(5){
+            top:90%;
+            left:10%;
+            animation: animate 9s linear infinite;
+        }
+        .wrapper div:nth-child(6){
+            top:30%;
+            left:60%;
+            animation: animate 5s linear infinite;
+        }
+        .wrapper div:nth-child(7){
+            top:70%;
+            left:20%;
+            animation: animate 8s linear infinite;
+        }
+        .wrapper div:nth-child(8){
+            top:75%;
+            left:60%;
+            animation: animate 10s linear infinite;
+        }
+        .wrapper div:nth-child(9){
+            top:50%;
+            left:50%;
+            animation: animate 6s linear infinite;
+        }
+        .wrapper div:nth-child(10){
+            top:45%;
+            left:20%;
+            animation: animate 10s linear infinite;
+        }
+        .wrapper div:nth-child(11){
+            top:10%;
+            left:90%;
+            animation: animate 9s linear infinite;
+        }
+        @keyframes animate {
+            0%{
+                transform: scale(0) translateY(0) rotate(90deg);
+            }
+            100%{
+                transform: scale(0.6) translateY(-100px)
+                rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="abc">
+      <a href="webTNcoTram.html">
+        <img onclick="reloadtrang()" src="japanse.png">
+        </a>
+        </div>
+    <div class="bottom-left">
+      <nav class="menu">
+        <ul>
+            <li><a href="#">Sơ Cấp</a></li>
+            <li><a href="#">Trung Cấp</a></li>
+            <li>
+                <a href="#">N5</a>
+                <ul>
+                    <li>
+                        <a href="webVocab.html">Từ Vựng</a>
+                    </li>
+                    <li>
+                        <a href="webNP.html">Ngữ Pháp</a>
+                    </li>
+                    <li>
+                        <a href="">Kanji</a>
+                        <ul class="kanjix">
+                          <li><a href="webgamekanji.html">Game Kanji</a></li>
+                          <li><a href="webkanji.html">Đọc Kanji</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Chia Thể</a>
+                        <ul>
+                          <li><a href="webchiathe.html">Chia Thể 1</a></li>
+                          <li><a href="webchiathe2.html">Chia Thể 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">N4</a>
+              <ul>
+                <li><a href="webVocabN4.html">Từ Vựng</a>
+                   
+                </li>
+                <li><a href="#">Kanji</a>
+                  <ul class="kanjix">
+                    <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                    <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                  </ul>
+                </li>
+                <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+                <li><a href="#">Chia Thể</a>
+                  <ul>
+                    <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                    <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                  </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">N3</a>
+              <ul>
+                <li><a href="webVocabN3.html">Từ Vựng</a>
+                   
+                </li>
+                <li><a href="#">Kanji</a>
+                  <ul class="kanjix">
+                    <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                    <li><a href="webkanji.html">Đọc Kanji</a></li>
+                  </ul>
+                </li>
+                <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                <li><a href="#">Chia Thể</a>
+                  <ul>
+                    <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                    <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                  </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">N2</a></li>
+            <li><a href="#">N1</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
+    <div class="container">
+      <div class="text">Bạn muốn ôn bài nào?</div>
+        <div class="row">
+          <a href ="bai1N4.html"><div class="box">Bai 26</div></a>
+          <a href ="bai2N4.html"><div class="box">Bai 27</div></a>
+          <a href ="bai3N4.html"><div class="box">Bai 28</div></a>
+          <a href ="bai4N4.html"><div class="box">Bai 29</div></a>
+          <a href ="bai5N4.html"><div class="box">Bai 30</div></a>
+          <a href ="bai6N4.html"><div class="box">Bai 31</div></a>
+          <!-- <div class="box">Bai 3</div>
+          <div class="box">Bai 4</div>
+          <div class="box">Bai 5</div>
+          <div class="box">Bai 6</div> -->
+          
+        </div>
+        <div class="row">
+          <a href ="bai7N4.html"><div class="box">Bai 32</div></a>
+          <a href ="bai8N4.html"><div class="box">Bai 33</div></a>
+          <a href ="bai9N4.html"><div class="box">Bai 34</div></a>
+          <a href ="bai10N4.html"><div class="box">Bai 35</div></a>
+          <a href ="bai11N4.html"><div class="box">Bai 36</div></a>
+          <a href ="bai12N4.html"><div class="box">Bai 37</div></a>
+          <!-- <div class="box">Bai 7</div>
+          <div class="box">Bai 8</div>
+          <div class="box">Bai 9</div>
+          <div class="box">Bai 10</div>
+          <div class="box">Bai 11 </div>
+          <div class="box">Bai 12</div>
+          -->
+        </div>
+        <div class="row">
+          <a href ="bai13N4.html"><div class="box">Bai 38</div></a>
+          <a href ="bai14N4.html"><div class="box">Bai 39</div></a>
+          <a href ="bai15N4.html"><div class="box">Bai 40</div></a>
+          <a href ="bai16N4.html"><div class="box">Bai 41</div></a>
+          <a href ="bai17N4.html"><div class="box">Bai 42</div></a>
+          <a href ="bai18N4.html"><div class="box">Bai 43</div></a>
+          <!-- <div class="box">Bai 13</div>
+          <div class="box">Bai 14</div>
+          <div class="box">Bai 15</div>
+          <div class="box">Bai 16</div>
+          <div class="box">Bai 17</div>
+          <div class="box">Bai 18</div>
+          -->
+        </div>
+        <div class="row">
+          <a href ="bai19N4.html"><div class="box">Bai 44</div></a>
+          <a href ="bai20N4.html"><div class="box">Bai 45</div></a>
+          <a href ="bai21N4.html"><div class="box">Bai 46</div></a>
+          <a href ="bai22N4.html"><div class="box">Bai 47</div></a>
+          <a href ="bai23N4.html"><div class="box">Bai 48</div></a>
+          <a href ="bai24N4.html"><div class="box">Bai 49</div></a>
+          <!-- <div class="box">Bai 19</div>
+          <div class="box">Bai 20</div>
+          <div class="box">Bai 21</div>
+          <div class="box">Bai 22 </div>
+          <div class="box">Bai 23</div>
+          <div class="box">Bai 24</div>
+           -->
+        </div>
+        <div class="row1">
+          <a href ="bai25N4.html"><div class="box">Bai 50</div></a>
+          <a href = "webTNN4.html"><div class="box1">Tong Hop</div></a>
+          
+        </div>
+      </div>
+      <div class="wrapper">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        </div>
+</body>
+</html>

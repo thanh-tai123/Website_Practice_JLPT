@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Kanji </title>
+    <link rel="icon" type="image/png" href="Mina N5/sharin.webp">
+    <style>
+      #kanji{
+        width: 650px;
+        height: 190px;
+        border: 1px solid black;
+        display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  margin-left: 330px;
+  font-size: 130px;
+      }
+      #answers{
+        margin-left: 550px;
+        margin-top: 20px;
+        display: flex;
+        gap: 1em 1em;
+        flex-direction: column;
+        width: 120px;
+        /* height: 50px; */
+        /* font-size: 30px; */
+      }
+      header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.i1{
+  position: absolute;
+  top: 150px;
+  right: 150px;
+}
+.i2{
+  position: absolute;
+  bottom: 70px;
+  right: 250px;
+}
+.i3{
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+.i4{
+  position: absolute;
+  bottom: 40px;
+  left: 170px;
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+/* button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+} */
+
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+.notification {
+    position: absolute;
+    left: 200px;
+    bottom:230px;
+  animation: show-notification 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+@keyframes show-notification {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.abc img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#answer1{
+  font-size: 26px;
+  height: 50px;
+  width: 230px;
+}
+#answer2{
+  font-size: 26px;
+  height: 50px;
+  width: 230px;
+}
+#answer3{
+  font-size: 26px;
+  height: 50px;
+  width: 230px;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="abc">
+      <a href="webTNcoTram.html">
+        <img onclick="reloadtrang()" src="Mina N5/sharin.webp">
+        </a>
+        </div>
+    <div class="bottom-left">
+        <nav class="menu">
+        <ul>
+            <li><a href="#" >Sơ Cấp</a></li>
+            <li><a href="#" >Trung Cấp</a></li>
+            <li><a href="#" >N5</a>
+                <ul>
+                    <li><a href="webVocab.html">Từ Vựng</a>
+                       
+                    </li>
+                    <li><a href="">Kanji</a>
+                      <ul class="kanjix">
+                        <li><a href="webgamekanji.html">Game Kanji</a></li>
+                        <li><a href="webkanji.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webNP.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiathe.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" >N4</a>
+                <ul>
+                  <li><a href="webVocab.html">Từ Vựng</a>
+                  </li>
+                  <li><a href="#">Kanji</a>
+                <ul class="kanjix">
+                  <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                  <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                </ul>
+              </li>
+              <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+              <li><a href="#">Chia Thể</a>
+                <ul>
+                  <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                  <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                </ul>
+              </li>
+          </ul>
+                
+            </li>
+            <li>
+                <a href="#" >N3</a>
+                <ul>
+                  <li><a href="webVocabN3.html">Từ Vựng</a>
+                     
+                  </li>
+                  <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                      <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                      <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                  <li><a href="#">Chia Thể</a>
+                    <ul>
+                      <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                      <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                    </ul>
+                  </li>
+              </ul>
+               
+            </li>
+            <li>
+                <a href="#" >N2</a>
+                
+            </li>
+            <li>
+                <a href="#" >N1</a>
+                
+            </li>
+            </ul>
+    </div>
+  </header>
+    <div id="kanji"></div>
+    <div id="answers">
+      <button id="answer1"></button>
+      <button id="answer2"></button>
+      <button id="answer3"></button>
+    <div class="i1">
+      <img src="Mina N5/calligraphy.png" width="80px">
+    </div>
+    <div class="i2">
+      <img src="Mina N5/kanji (1).png" width="80px">
+    </div>
+    <div class="i3">
+      <img src="Mina N5/tea-ceremony.png" width="80px">
+    </div>
+    <div class="i4">
+      <img src="Mina N5/itachi1.jpg" width="150px">
+    </div>
+    <div class="notification">Học Kanji đi </div>
+    <script>
+        let kanjis = [
+  { name: "一", pronunciation: "いち", meaning: "Số 1" },
+  { name: "二", pronunciation: "に", meaning: "Số 2" },
+  { name: "三", pronunciation: "さん", meaning: "Số 3" },
+  { name: "四", pronunciation: "よん", meaning: "Số 4" },
+  { name: "五", pronunciation: "ご", meaning: "Số 5" },
+  { name: "六", pronunciation: "ろく", meaning: "Số 6" },
+  { name: "七", pronunciation: "なな", meaning: "Số 7" },
+  { name: "八", pronunciation: "はち", meaning: "Số 8" },
+  { name: "九", pronunciation: "きゅう", meaning: "Số 9" },
+  { name: "十", pronunciation: "じゅう", meaning: "Số 10" },
+  { name: "円", pronunciation: "えん", meaning: "Yên" },
+  { name: "万", pronunciation: "まん", meaning: "Man" },
+  { name: "千", pronunciation: "せん", meaning: "Sen" },
+  { name: "心", pronunciation: "こころ", meaning: "Trái tim" },
+  { name: "会社員", pronunciation: "かいしゃいん", meaning: "Nhân viên công ty" },
+  { name: "開ける", pronunciation: "あける", meaning: "Mở" },
+  { name: "問題", pronunciation: "もんだい", meaning: "Vấn đề" },
+  { name: "質問", pronunciation: "しつもん", meaning: "Câu hỏi" },
+  { name: "野菜", pronunciation: "やさい", meaning: "Rau củ" },
+  { name: "黒い", pronunciation: "くろい", meaning: "Đen" },
+  { name: "起きる", pronunciation: "おきる", meaning: "Thức dậy" },
+  { name: "経験", pronunciation: "けいけん", meaning: "Kinh nghiệm" },
+  { name: "会議", pronunciation: "かいぎ", meaning: "Cuộc họp" },
+  { name: "安い", pronunciation: "やすい", meaning: "Rẻ" },
+  { name: "飲み物", pronunciation: "のみもの", meaning: "Đồ Uống" },
+  { name: "右", pronunciation: "みぎ", meaning: "Bên Phải" },
+  { name: "火曜日", pronunciation: "かようび", meaning: "Thứ Ba" },
+  { name: "学生", pronunciation: "がくせい", meaning: "Học Sinh" },
+  { name: "時間", pronunciation: "じかん", meaning: "Thời Gian" },
+  { name: "元気", pronunciation: "げんき", meaning: "Tốt, Khỏe" },
+  // Thêm các kanji khác vào đây
+  { name: "九月", pronunciation: "くがつ", meaning: "Tháng 9" },
+  { name: "休む", pronunciation: "やすむ", meaning: "Nghỉ Ngơi" },
+  { name: "お金", pronunciation: "おかね", meaning: "Tiền" },
+  { name: "空", pronunciation: "そら", meaning: "Bầu Trời" },
+  { name: "月", pronunciation: "つき", meaning: "Mặt Trăng" },
+  { name: "来月", pronunciation: "らいげつ", meaning: "Tháng Sau" },
+  { name: "今月", pronunciation: "こんげつ", meaning: "Tháng Này" },
+  { name: "一月", pronunciation: "いちがつ", meaning: "Tháng Một" },
+  { name: "意見", pronunciation: "いけん", meaning: "Ý Kiến" },
+  { name: "見せる", pronunciation: "みせる", meaning: "Cho Xem" },
+  { name: "見る", pronunciation: "みる", meaning: "Nhìn, Xem" },
+  { name: "右", pronunciation: "みぎ", meaning: "Bên Phải" },
+  { name: "火曜日", pronunciation: "かようび", meaning: "Thứ Ba" },
+  { name: "学生", pronunciation: "がくせい", meaning: "Học Sinh" },
+  { name: "時間", pronunciation: "じかん", meaning: "Thời Gian" },
+  //
+  { name: "午前", pronunciation: "ごぜん", meaning: "Buổi Sáng" },
+  { name: "午後", pronunciation: "ごご", meaning: "Buổi Chiều" },
+  { name: "校長", pronunciation: "こうちょう", meaning: "Hiệu Trưởng" },
+  { name: "口", pronunciation: "くち", meaning: "Miệng" },
+  { name: "旅行", pronunciation: "りょこう", meaning: "Du Lịch" },
+  { name: "銀行", pronunciation: "ぎんこう", meaning: "Ngân Hàng" },
+  { name: "高い", pronunciation: "たかい", meaning: "Cao, Đắt" },
+  { name: "高校生", pronunciation: "こうこうせい", meaning: "Học Sinh Cấp 3" },
+  { name: "国", pronunciation: "くに", meaning: "Đất Nước" },
+  { name: "中国", pronunciation: "ちゅうこく", meaning: "Trung Quốc" },
+  { name: "左", pronunciation: "ひだり", meaning: "Bên Trái" },
+  { name: "富士山", pronunciation: "ふじさん", meaning: "Núi Phú Sĩ" },
+  { name: "時計", pronunciation: "とけい", meaning: "Đồng Hồ" },
+  { name: "社長", pronunciation: "しゃちょう", meaning: "Giám Đốc" },
+  //
+  { name: "十", pronunciation: "じゅう", meaning: "Số 10" },
+  { name: "十日", pronunciation: "とおか", meaning: "10 Ngày" },
+  { name: "十歳", pronunciation: "じゅうさい", meaning: "10 Tuổi" },
+  { name: "女の子", pronunciation: "おんなのこ", meaning: "Bé Gái" },
+  { name: "女の人", pronunciation: "おんなのひと", meaning: "Phụ Nữ" },
+  { name: "小さい", pronunciation: "ちいさい", meaning: "Nhỏ, Bé" },
+  { name: "上", pronunciation: "うえ", meaning: "Phía Trên" },
+  { name: "上手", pronunciation: "じょうず", meaning: "Giỏi" },
+  { name: "食べる", pronunciation: "たべる", meaning: "Ăn" },
+  { name: "食堂", pronunciation: "しょくどう", meaning: "Nhà Ăn" },
+  { name: "新しい", pronunciation: "あたらしい", meaning: "Mới Mẻ" },
+  { name: "新聞", pronunciation: "しんぶん", meaning: "Báo" },
+  { name: "水", pronunciation: "みず", meaning: "Nước" },
+  { name: "水曜日", pronunciation: "すいようび", meaning: "Thứ Tư" },
+  { name: "人生", pronunciation: "じんせい", meaning: "Cuộc Sống" },
+  { name: "千円", pronunciation: "せんえん", meaning: "Một Nghìn Yên" },
+];
+
+let currentKanji;
+var audio = new Audio('C:/Users/Admin/OneDrive/Pictures/Documents/IT18305_PROJECT/success.wav');
+var audio1 = new Audio('C:/Users/Admin/OneDrive/Pictures/Documents/IT18305_PROJECT/wrong.wav');
+function chooseRandomKanji() {
+  let index = Math.floor(Math.random() * kanjis.length);
+  currentKanji = kanjis[index];
+}
+function showKanji() {
+  let kanjiElement = document.getElementById("kanji");
+  kanjiElement.innerText = currentKanji.name;
+}
+function showAnswers() {
+  let answer1Element = document.getElementById("answer1");
+  let answer2Element = document.getElementById("answer2");
+  let answer3Element = document.getElementById("answer3");
+  let answers = [currentKanji.meaning];
+  while (answers.length < 3) {
+    let index = Math.floor(Math.random() * kanjis.length);
+    let answer = kanjis[index].meaning;
+    if (!answers.includes(answer)) {
+      answers.push(answer);
+    }
+  }
+  shuffleArray(answers);
+  answer1Element.innerText = answers[0];
+  answer2Element.innerText = answers[1];
+  answer3Element.innerText = answers[2];
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function checkAnswer(answer) {
+  let message;
+  if (answer === currentKanji.meaning) {
+    message = `Chính xác!     Đọc là  ${currentKanji.pronunciation}.`;
+    audio.play();audio.volume=0.15;
+
+  } else {
+    message = `Sai rồi! Đáp án đúng là ${currentKanji.meaning}.`;
+    audio1.play();audio1.volume=0.3;
+  }
+  alert(message);
+  chooseRandomKanji();
+  showKanji();
+  showAnswers();
+}
+
+function resetGame() {
+  marked.fill(false);
+}
+
+
+
+chooseRandomKanji();
+showKanji();
+showAnswers();
+let answer1Element = document.getElementById("answer1");
+let answer2Element = document.getElementById("answer2");
+let answer3Element = document.getElementById("answer3");
+
+answer1Element.addEventListener("click", function() {
+  checkAnswer(answer1Element.innerText);
+});
+
+answer2Element.addEventListener("click", function() {
+  checkAnswer(answer2Element.innerText);
+});
+
+answer3Element.addEventListener("click", function() {
+  checkAnswer(answer3Element.innerText);
+});
+
+    </script>
+</body>
+</html>

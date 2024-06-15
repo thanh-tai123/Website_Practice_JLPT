@@ -1,0 +1,370 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngữ Pháp Bài 25</title>
+    <link rel="icon" type="image/png" href="Mina N5/cherry-blossom.png">
+    <style>
+       
+        #a{
+            width: 400px;
+            height:150px;
+            border: 1px solid black;
+            margin-left:430px;
+            margin-top:220px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #text{
+            display:none;
+        }
+        #btn{
+            margin-left:480px;
+            margin-top: 10px;
+           
+        }
+        #btnreload{
+            margin-left:130px;
+            margin-top: 10px;
+           
+        }
+        #btnr{
+            margin-left:-150px;
+            margin-top: 10px;
+           
+        }
+
+        header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.text{
+    position: absolute;
+    top: 140px;
+    left: 420px;
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(217, 25, 25);
+}
+.imgdora{
+    position: absolute;
+    bottom: 50px;
+    left: 90px;
+    
+}
+.imgdoya1{
+    position: absolute;
+    top: 200px;
+    right: 130px;
+
+}
+.imgdoya2{
+    position: absolute;
+    bottom: 30px;
+    right: 310px;
+    
+}
+.imgdoya3{
+    position: absolute;
+    top: 160px;
+    left: 110px;
+    
+}
+
+
+.imgdoya2 img {
+  position: absolute;
+  top:-140px;
+  left:0px;
+  animation: move-image 2s ease-in-out infinite alternate;
+}
+
+@keyframes move-image {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100px;
+  }
+}
+.notification {
+    position: absolute;
+    left: 220px;
+    bottom:200px;
+  animation: show-notification 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+@keyframes show-notification {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+.abc img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+p{
+            font-size: 25px;
+            margin-left: 55px;
+        }
+        #title{
+            color: red;
+            margin-left: 30px;
+        }
+        body{
+            background: rgb(234, 237, 239);;
+        }
+        table{
+            width: 700px;
+            
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+       
+    </style>
+     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+    <header>
+        <div class="abc">
+            <a href="webTNcoTram.html">
+            <img onclick="reloadtrang()" src="Mina N5/cherry-blossom.png">
+            </a>
+            </div>
+        <div class="bottom-left">
+            <nav class="menu">
+            
+            <ul>
+                <li><a href="#" >Sơ Cấp</a></li>
+                <li><a href="#" >Trung Cấp</a></li>
+                <li><a href="#" >N5</a>
+                    <ul>
+                        <li><a href="webVocab.html">Từ Vựng</a></li>
+                        <li><a href="webNP.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Kanji</a>
+                            <ul class="kanjix">
+								<li><a href="webgamekanji.html">Game Kanji</a></li>
+								<li><a href="webkanji.html">Đọc Kanji</a></li>
+							</ul>
+                        </li>
+                        <li><a href="#">Chia Thể</a>
+                            <ul>
+								<li><a href="webchiathe.html">Chia Thể 1</a></li>
+								<li><a href="webchiathe2.html">Chia Thể 2</a></li>
+							</ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N4</a>
+                    <ul>
+                        <li><a href="webVocabN4.html">Từ Vựng</a>
+                        </li>
+                        <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                        <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                        <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#" >N3</a>
+                    <ul>
+                        <li><a href="webVocabN3.html">Từ Vựng</a>
+                           
+                        </li>
+                        <li><a href="#">Kanji</a>
+                          <ul class="kanjix">
+                            <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                            <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Chia Thể</a>
+                          <ul>
+                            <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                            <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="camon.html" >N2</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N1</a>
+                    
+                </li>
+                </ul>
+        </div>
+    </header>
+    <p id="title">1. Thể thông thường qua khứ + ら、</p>
+    <p>かねが あったら、りょこうします。</p>
+    <p>やすかったら、パソコンを かいたいです。</p>
+    <p id="title">2. Động từ thể た＋ら : sau khi</p>
+    <p>ひるごはんを たべたら、すぐ いきます。</p>
+    <p id="title">3. Cho dù 
+        <ul>
+            <li>Động từ thể て + も</li>
+            <li>Tính từ đuôi い bỏ い thêm くても</li>
+            <li>Tính từ đuôi な thêm でも</li>
+
+        </ul>
+    </p>
+    <p>たかくても、このラジカセを かいたいです。</p>
+</html>

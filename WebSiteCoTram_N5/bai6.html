@@ -1,0 +1,363 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Vựng Bài 6</title>
+    <link rel="icon" type="image/png" href="Mina N5/sharin.webp">
+    <style>
+       
+        #a{
+            width: 400px;
+            height:150px;
+            border: 1px solid black;
+            margin-left:430px;
+            margin-top:220px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #text{
+            display:none;
+        }
+        #btn{
+            margin-left:480px;
+            margin-top: 10px;
+           
+        }
+        #btnreload{
+            margin-left:130px;
+            margin-top: 10px;
+           
+        }
+
+        p{
+            font-size: 100px;
+        }
+        header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 3px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.abc img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.text{
+    position: absolute;
+    top: 140px;
+    left: 420px;
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(217, 25, 25);
+}
+.imgdora{
+    position: absolute;
+    bottom: 50px;
+    left: 130px;
+    
+}
+.imgdoya1{
+    position: absolute;
+    top: 200px;
+    right: 130px;
+
+}
+.imgdoya2{
+    position: absolute;
+    bottom: 30px;
+    right: 290px;
+
+}
+.imgdoya3{
+    position: absolute;
+    top: 160px;
+    left: 110px;
+
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+    </style>
+     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+    <header>
+        <div class="abc">
+            <a href="webTNcoTram.html">
+            <img onclick="reloadtrang()" src="Mina N5/sharin.webp">
+            </a>
+            </div>
+        <div class="bottom-left">
+            <nav class="menu">
+            
+            <ul>
+                <li><a href="#" >Sơ Cấp</a></li>
+                <li><a href="#" >Trung Cấp</a></li>
+                <li><a href="#" >N5</a>
+                    <ul>
+                        <li><a href="webVocab.html">Từ Vựng</a></li>
+                        <li><a href="webNP.html">Ngữ Pháp</a></li>
+                        <li><a href="">Kanji</a>
+                            <ul class="kanjix">
+								<li><a href="webgamekanji.html">Game Kanji</a></li>
+								<li><a href="webkanji.html">Đọc Kanji</a></li>
+							</ul>
+                        </li>
+                        <li><a href="#">Chia Thể</a>
+                            <ul>
+								<li><a href="webchiathe.html">Chia Thể 1</a></li>
+								<li><a href="webchiathe2.html">Chia Thể 2</a></li>
+							</ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N4</a>
+                    <ul>
+                        <li><a href="webVocabN4.html">Từ Vựng</a>
+                        </li>
+                        <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                        <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                        <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#" >N3</a>
+                    <ul>
+                        <li><a href="webVocabN3.html">Từ Vựng</a>
+                           
+                        </li>
+                        <li><a href="#">Kanji</a>
+                          <ul class="kanjix">
+                            <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                            <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Chia Thể</a>
+                          <ul>
+                            <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                            <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N2</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N1</a>
+                    
+                </li>
+                </ul>
+        </div>
+    </header>
+<div class="text">Từ vựng bài 6</div>
+<div id ='a'>
+    <p id="b" ></p>
+</div>
+<button id = "btn" onclick="showText()">Hiển thị chữ</button>
+<button id = "btnreload" onclick="reloadtrang()">Reset</button>
+<div class="imgdora">
+    <img src="doremon.jpg" width="120px">
+</div>
+<div class="imgdoya1">
+    <img src="Mina N5/onigiri (1).png" width="100px">
+</div>
+<div class="imgdoya3">
+    <img src="ramen.png" width="100px">
+</div>
+<div class="imgdoya2">
+    <img src="bento.png" width="100px">
+</div>
+<script>
+    let previousResults = [];
+    var audio = new Audio('C:/Users/Admin/OneDrive/Pictures/Documents/IT18305_PROJECT/congrat.mp3');
+function showText() {
+    let a = document.querySelector('#a');
+    let options =
+     ["たべます","のみます","すいます","みます ","ききます","よみます","かきます","かいます","とります","しゃしん","します ","あいます","ごはん ","あさごはん ","ひるごはん ",
+     "ばんごはん ","パン  ","たまご ","にく  ","さかな ","やさい ","くだもの","みず  ","おちゃ ","こうちゃ","ぎゅうにゅう","ジュース","ビール ","さけ  ","たばこ ","てがみ ","レポート","ビデオ ","みせ  "
+     ,"にわ  ","しゅくだい ","テニス ","サッカー","なに  ","いっしょに ","ちょっと","いつも ","ときどき","それから","ええ  ","いいですね ","わかりました"
+     
+    ]
+    options = options.filter(option => option !== ""); // loại bỏ phần tử rỗng
+    if (previousResults.length === options.length) {
+    a.innerText = "Đã hoàn thành!";
+    a.style.fontSize='100px';
+    a.style.width="700px";audio.play();audio.volume=0.2;
+    a.style.marginLeft="287px";
+    return;
+  }
+    let x = options[Math.floor(Math.random() * options.length)];
+      a.style.fontSize='100px';
+      a.style.width = "auto";
+    if(x==='わかりました'|| x==='いいですね ' || x==='いっしょに ' || x==='しゅくだい '||
+    x==='ぎゅうにゅう'||x==='ばんごはん '||x==='ひるごはん '||x==='あさごはん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+        
+    }else{
+        a.style.fontSize='100px';
+  
+  a.style.marginLeft="430px";
+    }
+        
+    
+    if (previousResults.includes(x)) {
+        showText();
+    }
+
+    
+     else {
+        previousResults.push(x);
+        
+        a.innerText = x;
+        a.style.width=(x.length *100)+"px";
+        a.style.fontFamily = "Arial";
+        responsiveVoice.speak(x, 'Japanese Female');
+    }
+    
+}
+function reloadtrang(){
+            location.reload();
+        }
+            
+		
+</script>
+</html>

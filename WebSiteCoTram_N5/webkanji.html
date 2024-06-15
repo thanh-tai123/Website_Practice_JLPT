@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Đọc Kanji</title>
+    <link rel="icon" type="image/png" href="Mina N5/sharin.webp">
+    
+    <style>
+      #kanji{
+        width: 650px;
+        height: 190px;
+        border: 1px solid black;
+        display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 110px;
+  margin-left: 320px;
+  font-size: 190px;
+      }
+      #answers{
+        margin-left: 600px;
+        margin-top: 20px;
+        display: flex;
+        gap: 1em 1em;
+        flex-direction: column;
+        width: 100px;
+      }
+      header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.i1{
+  position: absolute;
+  top: 150px;
+  right: 150px;
+}
+.i2{
+  position: absolute;
+  bottom: 70px;
+  right: 250px;
+}
+.i3{
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+.i4{
+  position: absolute;
+  bottom: 70px;
+  left: 250px;
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+/* button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+} */
+
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+#game-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    #kanji {
+      font-size: 150px;
+      padding-top: 20px;
+    }
+    
+    button {
+      font-size: 24px;
+      margin: 10px;
+      margin-left: 30px;
+     
+    }
+    #back-button{
+      margin-left: 45px;
+    }
+    .abc img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.imgdora{
+    position: absolute;
+    bottom: 70px;
+    left: 130px;
+    
+}
+.imgdoya1{
+    position: absolute;
+    top: 200px;
+    right: 130px;
+
+}
+.imgdoya2{
+    position: absolute;
+    bottom: 30px;
+    right: 290px;
+
+}
+.imgdoya3{
+    position: absolute;
+    top: 160px;
+    left: 110px;
+
+}
+.notification {
+    position: absolute;
+    left: 200px;
+    bottom:230px;
+  animation: show-notification 4s ease-in-out infinite;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+@keyframes show-notification {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="abc">
+      <a href="webTNcoTram.html">
+        <img onclick="reloadtrang()" src="Mina N5/sharin.webp">
+        </a>
+        </div>
+    <div class="bottom-left">
+        <nav class="menu">
+        <ul>
+            <li><a href="#" >Sơ Cấp</a></li>
+            <li><a href="#" >Trung Cấp</a></li>
+            <li><a href="#" >N5</a>
+                <ul>
+                    <li><a href="webVocab.html">Từ Vựng</a>
+                       
+                    </li>
+                    <li><a href="">Kanji</a>
+                      <ul class="kanjix">
+                        <li><a href="webgamekanji.html">Game Kanji</a></li>
+                        <li><a href="webkanji.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webNP.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiathe.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" >N4</a>
+                <ul>
+                  <li><a href="webVocabN4.html">Từ Vựng</a>
+                  </li>
+                  <li><a href="#">Kanji</a>
+                <ul class="kanjix">
+                  <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                  <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                </ul>
+              </li>
+              <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+              <li><a href="#">Chia Thể</a>
+                <ul>
+                  <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                  <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                </ul>
+              </li>
+          </ul>
+                
+            </li>
+            <li>
+                <a href="#" >N3</a>
+                <ul>
+                  <li><a href="webVocabN3.html">Từ Vựng</a>
+                     
+                  </li>
+                  <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                      <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                      <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                  <li><a href="#">Chia Thể</a>
+                    <ul>
+                      <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                      <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                    </ul>
+                  </li>
+              </ul>
+               
+            </li>
+            <li>
+                <a href="#" >N2</a>
+                
+            </li>
+            <li>
+                <a href="#" >N1</a>
+                
+            </li>
+            </ul>
+    </div>
+  </header>
+       <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  </head>
+  <body>
+    <div id="game-container">
+      <h1 id="kanji">漢字</h1>
+      <p id="yomi"></p> <!-- Thêm phần tử HTML mới để hiển thị yomi -->
+      
+      <button id="back-button">Quay lại</button>
+      <button id="read-button">Đọc</button>
+      <button id="next-button">Tiếp theo</button>
+    </div>
+    <div class="imgdora">
+      <img src="Mina N5/itachi1.jpg" width="120px">
+  </div>
+  <div class="imgdoya1">
+      <img src="Mina N5/cocktail.png" width="100px">
+  </div>
+  <div class="imgdoya2">
+      <img src="Mina N5/dojo.png" width="100px">
+  </div>
+  <div class="imgdoya3">
+      <img src="Mina N5/japanese (1).png" width="100px">
+  </div>
+  <div class="notification">Học Kanji đi </div>
+   <script>
+    // Định nghĩa danh sách kanji và âm đọc tương ứng
+// Định nghĩa danh sách kanji và âm đọc tương ứng
+const kanjiList = [
+  { kanji: "水", yomi: "みず" },
+  { kanji: "金", yomi: "きん" },
+  { kanji: "土", yomi: "つち" },
+  { kanji: "会社員", yomi: "かいしゃいん" },
+  { kanji: "起きる", yomi: "おきる" },
+  { kanji: "何", yomi: "なに" },
+  { kanji: "火", yomi: "ひ" },
+  { kanji: "木", yomi: "き" },
+  { kanji: "出ます", yomi: "でます" },
+  { kanji: "千六百円", yomi: "せんろっぴゃくえん" },
+  { kanji: "少し", yomi: "すこし" },
+  { kanji: "安", yomi: "やすい" },
+  { kanji: "花", yomi: "はな" },
+  { kanji: "休む", yomi: "やすむ" },
+  { kanji: "月", yomi: "つき" },
+  { kanji: "日本語", yomi: "にほんご" },
+  { kanji: "口", yomi: "くち" },
+  { kanji: "今年", yomi: "ことし" },
+  { kanji: "南", yomi: "みなみ" },
+  { kanji: "読む", yomi: "よむ" },
+  { kanji: "大きい", yomi: "おおきい" },
+  { kanji: "来る", yomi: "くる" },
+  { kanji: "電話", yomi: "でんわ" },
+  { kanji: "話す", yomi: "はなす" },
+  { kanji: "天気", yomi: "てんき" },
+  { kanji: "買う", yomi: "かう" },
+  { kanji: "九月", yomi: "くがつ" },
+  { kanji: "銀行", yomi: "ぎんこう" },
+  { kanji: "多い", yomi: "おおい" },
+  { kanji: "新幹線", yomi: "しんかんせん" },
+  { kanji: "新聞", yomi: "しんぶん" },
+  { kanji: "新しい", yomi: "あたらしい" },
+  { kanji: "午後", yomi: "ごご" },
+  { kanji: "高い", yomi: "たかい" },
+  { kanji: "歌手", yomi: "かしゅ" },
+  { kanji: "新幹線", yomi: "しんかんせん" },
+  { kanji: "古い", yomi: "ふるい" },
+  { kanji: "後れる", yomi: "おくれる" },
+  { kanji: "足りる", yomi: "たりる" },
+  { kanji: "足", yomi: "あし" },
+  { kanji: "聞く", yomi: "きく" },
+  { kanji: "母", yomi: "はは" },
+  { kanji: "午前", yomi: "ごぜん" },
+  { kanji: "北", yomi: "きた" },
+  { kanji: "先生", yomi: "せんせい" },
+  { kanji: "木", yomi: "き" },
+  { kanji: "毎日", yomi: "まいにち" },
+  { kanji: "名前", yomi: "なまえ" },
+  { kanji: "店", yomi: "みせ" },
+  { kanji: "電気", yomi: "でんき" },
+  { kanji: "道", yomi: "みち" },
+  { kanji: "車", yomi: "くるま" },
+  { kanji: "社会", yomi: "しゃかい" },
+  { kanji: "社長", yomi: "しゃちょう" },
+  { kanji: "手", yomi: "て" },
+  { kanji: "女の人", yomi: "おんなのひと" },
+  { kanji: "食べる", yomi: "たべる" },
+  { kanji: "西", yomi: "にし" },
+  { kanji: "山", yomi: "やま" },
+  { kanji: "消す", yomi: "けす" },
+  { kanji: "大きい", yomi: "おおきい" },
+  { kanji: "耳", yomi: "みみ" },
+  { kanji: "左", yomi: "ひだり" },
+  { kanji: "今", yomi: "いま" },
+  { kanji: "今週", yomi: "こんしゅう" },
+  { kanji: "気持ち", yomi: "きもち" },
+  { kanji: "元気", yomi: "げんき" },
+  { kanji: "時間", yomi: "じかん" },
+  { kanji: "外", yomi: "そと" },
+  { kanji: "魚", yomi: "さかな" },
+  { kanji: "夏休み", yomi: "なつやすみ" },
+  { kanji: "旅行", yomi: "りょこう" },
+  { kanji: "言語", yomi: "げんご" },
+  { kanji: "意見", yomi: "いけん" },
+  { kanji: "店", yomi: "みせ" },
+  { kanji: "京都", yomi: "きょうと" },
+  { kanji: "何人", yomi: "なんにん" },
+  { kanji: "外国人", yomi: "がいこくじん" },
+  { kanji: "外国人", yomi: "がいこくじん" },
+];
+
+let currentIndex = -1;
+let previousIndex = -1;
+
+// Lấy các phần tử HTML từ ID
+const kanjiElement = document.getElementById("kanji");
+const yomiElement = document.getElementById("yomi"); // Lấy phần tử HTML mới để hiển thị yomi
+const readButton = document.getElementById("read-button");
+const backButton = document.getElementById("back-button");
+const nextButton = document.getElementById("next-button");
+
+// Hàm hiển thị kanji và âm đọc tương ứng
+function showKanji() {
+  if (currentIndex < 0 || currentIndex >= kanjiList.length) {
+    return;
+  }
+
+  const currentKanji = kanjiList[currentIndex];
+  kanjiElement.innerText = currentKanji.kanji;
+  // Hiển thị yomi
+  // yomiElement.innerText = currentKanji.yomi; 
+  responsiveVoice.speak(currentKanji.yomi, 'Japanese Female');
+}
+function showKanji1() {
+  if (currentIndex < 0 || currentIndex >= kanjiList.length) {
+    return;
+  }
+
+  const currentKanji = kanjiList[currentIndex];
+  kanjiElement.innerText = currentKanji.kanji;
+  // Hiển thị yomi
+  // yomiElement.innerText = currentKanji.yomi; 
+  // responsiveVoice.speak(currentKanji.yomi, 'Japanese Female');
+}
+
+// Hàm chuyển đến kanji tiếp theo
+function nextKanji() {
+  previousIndex = currentIndex;
+  currentIndex = (currentIndex + 1) % kanjiList.length;
+  showKanji1();
+}
+
+// Hàm quay lại kanji trước đó
+
+// Hàm quay lại kanji trước đó
+// function backKanji() {
+//   if (currentIndex === 0) {
+//     currentIndex = kanjiList.length - 1;
+//   } else {
+//     currentIndex = previousIndex;
+//   }
+//   showKanji();
+// }
+function backKanji() {
+  previousIndex = currentIndex;
+  currentIndex = (currentIndex - 1 + kanjiList.length) % kanjiList.length;
+  showKanji();
+}
+// Xử lý sự kiện khi nhấn nút Đọc
+readButton.addEventListener("click", () => {
+  showKanji();
+});
+
+// Xử lý sự kiện khi nhấn nút Quay lại
+backButton.addEventListener("click", () => {
+  backKanji();
+});
+
+// Xử lý sự kiện khi nhấn nút Tiếp theo
+nextButton.addEventListener("click", () => {
+  nextKanji();
+});
+
+// Hiển thị kanji đầu tiên khi tải trang
+nextKanji();
+   </script>
+  </body>
+</html>

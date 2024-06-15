@@ -1,0 +1,716 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tự Vựng Tổng Hợp </title>
+    <link rel="icon" type="image/png" href="Mina N5/sharin.webp">
+    <style>
+       
+        #a{
+            width: 400px;
+            height:150px;
+            border: 1px solid black;
+            margin-left:430px;
+            margin-top:220px;
+            align-items: center;
+  justify-content: center;
+  display: flex;
+        }
+
+        #text{
+            display:none;
+        }
+        #btn{
+            margin-left:480px;
+            margin-top: 10px;
+           
+        }
+        #btnreload{
+            margin-left:130px;
+            margin-top: 10px;
+           
+        }
+
+        p{
+            font-size: 100px;
+        }
+        header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 3px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.abc img {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.text{
+    position: absolute;
+    top: 140px;
+    left: 370px;
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(217, 25, 25);
+}
+.imgdora{
+    position: absolute;
+    bottom: 50px;
+    left: 130px;
+    
+}
+.imgdoya1{
+    position: absolute;
+    top: 200px;
+    right: 130px;
+
+}
+.imgdoya2{
+    position: absolute;
+    bottom: 30px;
+    right: 290px;
+
+}
+.imgdoya3{
+    position: absolute;
+    top: 160px;
+    left: 110px;
+
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+    </style>
+       <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+    <header>
+        <div class="abc">
+            <a href="webTNcoTram.html">
+            <img onclick="reloadtrang()" src="Mina N5/sharin.webp">
+            </a>
+            </div>
+        <div class="bottom-left">
+            <nav class="menu">
+            
+            <ul>
+                <li><a href="#" >Sơ Cấp</a></li>
+                <li><a href="#" >Trung Cấp</a></li>
+                <li><a href="#" >N5</a>
+                    <ul>
+                        <li><a href="webVocab.html">Từ Vựng</a></li>
+                        <li><a href="webNP.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Kanji</a>
+                            <ul class="kanjix">
+								<li><a href="webgamekanji.html">Game Kanji</a></li>
+								<li><a href="webkanji.html">Đọc Kanji</a></li>
+							</ul>
+                        </li>
+                        <li><a href="#">Chia Thể</a>
+                            <ul>
+								<li><a href="webchiathe.html">Chia Thể 1</a></li>
+								<li><a href="webchiathe2.html">Chia Thể 2</a></li>
+							</ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N4</a>
+                    <ul>
+                        <li><a href="webVocabN4.html">Từ Vựng</a>
+                        </li>
+                        <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                        <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                        <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#" >N3</a>
+                    <ul>
+                        <li><a href="webVocabN3.html">Từ Vựng</a>
+                           
+                        </li>
+                        <li><a href="#">Kanji</a>
+                          <ul class="kanjix">
+                            <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                            <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="webquizN3.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Chia Thể</a>
+                          <ul>
+                            <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                            <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N2</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N1</a>
+                    
+                </li>
+                </ul>
+        </div>
+    </header>
+<div class="text">Cùng Ôn Tập Nào</div>
+<div id ='a'>
+    <p id="b" ></p>
+</div>
+<button id = "btn" onclick="showText()">Hiển thị chữ</button>
+<button id = "btnreload" onclick="reloadtrang()">Reset</button>
+<div class="imgdora">
+    <img src="doremon.jpg" width="120px">
+</div>
+<div class="imgdoya1">
+    <img src="Mina N5/drinkable.png" width="100px">
+</div>
+<div class="imgdoya2">
+    <img src="Mina N5/sake.png" width="100px">
+</div>
+<div class="imgdoya3">
+    <img src="Mina N5/nigiri.png" width="100px">
+</div>
+<script>
+    var audio = new Audio('C:/Users/Admin/OneDrive/Pictures/Documents/IT18305_PROJECT/congrat.mp3');
+    let previousResults = [];
+function showText() {
+    let a = document.querySelector('#a');
+  
+    let options = [
+    //bai1
+    "わたし ","あなた ","あのひと","あのかた","～さん ","～ちゃん"
+    ,"～じん ","きょうし","がくせい","かいしゃいん ",
+    "ぎんこういん ","いしゃ ","けんきゅうしゃ","だいがく","だれ  ","どなた "
+    ,"～さい ","なんさい","おいくつ","はい  ","いいえ ","はじめまして ",
+    "アメリカ","イギリス","にほん ","かんこく",
+    //bai2
+    "これ  ","それ  ","あれ  ","この～ ","その～ ","あの～ ","ほん  ","じしょ ",
+    "ざっし ","しんぶん","メート ","てちょう","めいし ","くるま ","つくえ ","いす  ","チョコレート","コーヒー","おみやげ","えいご "
+    ,"カード ","えんぴつ","ポールペン ","シャープペンシル","かぎ  ","とけい ","かさ  ","かばん ","にほんご","～ご  ","なん  ",
+    ,"CD  ","テレビ ","ラジオ ","カメラ ","コンピューター ",
+    //bai3
+    "ここ  ","そこ  ","あそこ ","どこ  ","こちら ","そちら ","あちら ",
+    "じむしょ",
+    "うけつけ","ロビー ","へや  ","トイレ ","かいだん"
+    ,"でんわ ","くに  ","かいしゃ","うち  ",
+    "くつ  ","ネクタイ","ワイン ","うりば ","ちか  ","なんがい","ーえん "
+    ,"いくら ","ひゃく ","せん  ","まん  ",
+    //bai4
+    "おきます","ねます ","はたらきます","やすみます ","べんきょうします","おわります ","デパート","ぎんこう","ゆうびんきょく ",
+"としょかん ","びじゅつかん", "でんわばんごう ","いま  ","～じ  ","～ふん/～ぷん ","はん  ","なんじ ","なんぷん","ごぜん ",
+"ごご  ","あさ  ","ひる  ","ばん  ","よる  ","おととい","きのう ","きょう ","あした ","あさって","けさ  ",
+"こんばん","ゆうべ ","やすみ ","ひるやすみ ","まいあさ","まいばん","まいにち",
+
+    //bai5
+    "いきます","きます ","かえります ","がっこう","スーパー","えき  ","ひこうき","ふね  ","でんしゃ","ちかてつ",
+     "しんかんせん","バス  ","タクシー","じてんしゃ ","あるいて","ひと  ","ともだち","いつ  ","なんようび"
+     ,"かれ  ","かのじょ","かぞく ","ひとりで","せんしゅう ","こんしゅう ","らいしゅう ","せんげつ","こんげつ","らいげつ",
+     "きょねん ","ことし ","らいねん","ーねん ","なんねん","ーがつ ","ようか ","ここのか","とおか ","じゅうよっか","はつか ","にじゅうよっか ","ーにち ","なんにち"
+     ,"なんがつ","ついたち","ふつか ","みっか ","よっか ","いつか ","むいか ","なのか ",
+    //bai6
+    "たべます","のみます","すいます","みます ","よみます","かきます","かいます","しゃしん","あいます","ごはん ","あさごはん ","ひるごはん ",
+     "ばんごはん ","パン  ","たまご ","にく  ","さかな ","やさい ","くだもの","みず  ","こうちゃ","ぎゅうにゅう","ジュース","ビール ","さけ  ","たばこ ","てがみ ","レポート","ビデオ ","みせ  "
+     ,"にわ  ","しゅくだい ","テニス ","サッカー","なに  ","いっしょに ","ちょっと","いつも ","ときどき","それから","ええ  ","いいですね ","わかりました",
+     
+    //bai 7
+    "きります","おくります ","あげます","もらいます ","かします","かります","おしえます ","ならいます ","かけます","て   ","はし  " ,"スプーン","ナイフ ","フォーク","はさみ ","パソコン","ケータイ" ,"メール ","ねんがじょう","パンチ ","ホッチキス ","セロテープ ","けしゴム","かみ  ",
+     "はな  ","シャツ ","プレゼント ","にもつ ","おかね ","きっぷ ","クリスマス ","ちち  ","はは  " ,"おとうさん ","おかあさん ","もう  ","まだ  ","これから",
+    
+    //bai 8
+    "ハンサム","きれい ","しずか ","にぎやか","ゆうめい","しんせつ", "げんき ","ひま  ","べんり ","すてき ","おおきい","ちいさい","あたらしい "
+     ,"ふるい ","いい  ","わるい ","あつい ","さむい ","つめたい","むずかしい ","やさしい","たかい " ,"やすい ","ひくい ","おもしろい ","おいしい","いそがしい ","たのしい", "しろい ","くろい ","あかい ","あおい ","さくら ","やま  ","まち  ","たべもの"
+     ,"ところ ","りょう ","レストラン ","せいかつ","しごと ","どう  ","どうな～","とても " ,"あまり ","そして ","～が～ ",
+    
+    //bai 9
+    "わかります ","すき  ","きらい ","じょうず","へた  ", "のみもの","りょうり","スポーツ","やきゅう","ダンス ","りょこう", "おんがく","うた  ","クラシック ","ジャズ ","コンサート ","カラオケ","かぶき " ,"え   ","かんじ ","ひらがな","かたかな","ローマじ","こまかいおかね ",
+     "チケット","じかん ","ようじ ","やくそく","ごしゅじん ", "おっと・じゅじん","おくさん","つま・かない  ","こども ","だいたい","たくさん","すこし ","ぜんぜん","はやく ","～から ","どうして",
+    
+    //bai10
+    "いろいろ","おとこのひと","おんなのひと","おとこのこ ","おんなのこ ","いぬ  ","ねこ  ","パンダ ","ぞう  ","き   ",
+     "もの  ","でんち ","はこ  ","スイッチ","れいぞうこ ","テーブル","ベッド ","たな  " ,"ドア  ","まど  ","ポスト ","ビル  ","ATM ","コンビニ","こうえん",
+     "きっさてん ","～や  ","のりば ","けん  ","うえ  ","した  ","まえ  ", "うしろ ","みぎ  ","ひだり ","なか  ","そと  "  ,"となり ","ちかく ","あいだ ","～や～など ",
+    
+    //bai 11
+    "います ","かかります ","やすみます ","ひとつ ","ふたつ ","みっつ ","よっつ ","いつつ ","むっつ ", "ななつ ","やっつ ","ここのつ","とお  ","いくつ ","ひとり ","ふたり ","ーにん ","ーだい ","ーまい "
+     ,"ーかい ","りんご ","みかん ","サンドイッチ","アイスクリーム ","きって ","はがき ","ふうとう",  "りょうしん ","きょうだい ","あに  ","おにいさん ","あね  ","あねえさん ","おとうと","おとうとさん","いもうと","いもうとさん","がいこく"
+     ,"クラス ","ーじかん","ーしゅうかん","ーかげつ","ーねん ","～ぐらい","どのくらい ", "ぜんぶで","みんな ","～だけ ",
+    
+    //bai12 
+    "かんたん","ちかい ","とおい ","はやい ","おそい ","おおいひとが～ ","すくないひとが～","あたたかい ","すずしい",
+    "あまい ","からい ","おもい ","かるい ","いいコーヒーが～","きせつ ","はる  ","なつ  ","あき  ","ふゆ  ",
+    "てんき ","あめ  ","ゆき  ","くもり ","ホテル ","くうこう","うみ  ","せかい ","パーティー ","まつり ","しけん ","すきやき","さしみ ","すし  ","てんぷら","いけばな","もみじ ","どちら ","はじめて",
+
+    //bai13
+    "あそびます ","およぎます ","むかえます ","つかれます ","はいります ","けっこんします ",
+    "かいものします ","しょくじします ","さんぽします","たいへん","ほしい ","ひろい ","せまい ","しやくしょ ","プール ","かわ  ","けいざい",
+    "びじゅつ","つり  ","スキー ","かいぎ ","とうろく","しゅうまつ ","～ごろ ","なにか ","どこか ",
+
+    //bai14
+    "つけます", "けします","あけます", "しめます", "いそぎます ", "まちます","とめます","もちます" ,
+    "てつだいます", "よびます", "はなします ", "みせます", "おしえます ", "はじめます ", "ふります", "コピーします", 
+    "エアコン","パスポート ","じゅうしょ ","ちず  ","しお  ","さとう ","よみかた",
+    "～かた ","ゆっくり","すぐ  ","また  ","あとで ","もう～ ","いいですよ ","さあ  ","あれ？ ","まっすぐ","おつり ",
+
+    //bai15
+    "おきます","つくります ","うります","しります","すみます","けんきゅうします","しりょう","カタログ",
+    "じこくひょう","ふく  ","せいひん","ソフト ","せんもん","はいしゃ","とこや ","プレイガイド","どくしん","とくに ",
+
+    //bai16
+    "のりますでんしゃに～","おりますでんしゃに～","のりかえます","あびますシャワーを～","いれます","だします","でますだいがくを～ ",
+    "やめますかいしゃを～","おします","わかい ","ながい ","みじかい","あかるい","くらい ","せがたかい ","あたまがいい","からだ ","あたま ","かみ  ",
+    "なまえ ","かお  ","め   ","みみ  ","は   ","おなか ","あし  ","サービス","ジョギング " ,"シャワー","みどり ","おてら ",
+    "じんじゃ","りゅうがくせい ","一ばん ","どうやって ","どの～ ",
+
+    //bai17
+    "おぼえます ","わすれます ","なくします ","レポートをだします ","うわぎ ","したぎ ","せんせい","2,3にち ","2,3~","～までに","ですから",
+    "はらいます ","かえします ","でかけます ","ぬぎます","もっていきます ","もってきます","しんぱいします ","ざんぎょうします",
+    "しゅっちょうします ","くすりをのみます","おふろにはいります ","たいせつ","だいじょうぶ","あぶない","もんだい","こたえ ","きんえん","かぜ  ","ねつ  ","びょうき","くすり ","おふろ ",
+
+    //bai18
+    "できます","あらいます ","うたいます ","あつめます ","すてます","うんてんします ",
+    "よやくします","けんかくします ","こくさい～ ","げんきん","しゅみ ","にっき ","いのり ","かちょう","ぶちょう",
+    "しゃちょう ","どうぶつ","うま  ","へえ  ","ピアノ ","―メートル ","ぼくじょう ","ほんとうですか ","ぜひ  ",
+
+
+    //bai19
+    "のぼります ","れんしゅうします","そうじします","せんたくします ","なります","とまります ","ねむい ","つよい ",
+    "よわい ","ちょうし","ちょうしがわるい","ちょうしがいい ","おちゃ ","すもう ","パチンコ","ゴルフ ","ひ   ","もうすぐ","だんだん","いちど ",
+    "いちども","おかげさまで","かんぱい","じつは ","ダイエット ","しかし ","むり  ","からだにいい",
+    
+    //bai20
+    "いります","しらべます ","しゅうりします ","ぼく  ","きみ  "  ,"～くん ",
+    "うん  ","ううん ","ことば ","きもの ","ビザ  ","はじめ ","おわり ","こっち ", "そっち ","あっち ","どっち ","みんなで","～けど ",
+   
+    //bai21
+    "おもいます ","いいます","かちます","まけます","おなじ ","すごい ","しゅしょう ","だいとうりょう ",
+     "あります","やくにたちます ","むだ  ","ふべん ","せいじ ","ニュース","スピーチ","しあい ","アルバイト ","いけん ",
+     "はなし ","ユーモア","デザイン","こうつう","ラッシュ","さいきん","たぶん ","きっと ","ほんとうに ","そんなに","～について ",
+    
+    //bai 22
+    "はきます","かぶります ","します ","うまれます ","わたしたち ","コート ","セーター","スーツ ","ぼうし ","めがね ","ケーキ ","べんとう",
+    "ロボット","つごう ","よく  ",
+    
+    //bai23
+    "ききます","まわします ","ひきます","かえます","さわります ","でます ","あるきます ","わたりあす ", "まがります ","さびしい","おゆ  ","おと  ","サイズ ","こしょう","みち  ",
+    "こうさてん ","しんごう","かど  ","たてもの","なんかいも ",
+    
+     //bai 24
+    "くれます","なおします ","つれていきます","つれてきます", "おくります ",  "しょうかいします","あんないします" ,"せつめいします","おじいさん ",
+     "おばあさん ","じゅんび","ひっこし","かし  " ,"ホームステイ","ぜんぶ ","じぶんで",
+    
+    //bai 25
+    "かんがえます","つきます","とります","たります","いなか ","チャンス","おく  ","もし  ","いみ  "
+   
+    ];
+    options = options.filter(option => option !== ""); // loại bỏ phần tử rỗng
+    if (previousResults.length === options.length) {
+    a.innerText = "Đã hoàn thành!";
+    a.style.fontSize='100px';audio.play();audio.volume=0.4;
+    a.style.width="700px";
+    a.style.marginLeft="287px";
+    return;
+  }
+    let x = options[Math.floor(Math.random() * options.length)];
+      a.style.fontSize='100px';
+    //bai1
+      if(x==='けんきゅうしゃ'|| x==='かいしゃいん ' || x==='はじめまして ' || x==='ぎんこういん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+        
+    }else if(x==='～しゃいん '||x==='びょういん '||x==='ちゅうごく '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+        
+    }
+    //bai2
+      else if(x==='チョコレート'|| x==='バールペン '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if (x==='コンピューター '|| x==='シャープペンシル'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="240px";
+    }
+    //bai3
+    else if(x==='エスカレーター '|| x==='じどうはんばいき'
+    ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="230px";
+        
+    }else if(x==='きょうしつ '||x==='しょくどう '|| x==='エレベーター'|| x==='かいぎしつ '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="220px";
+    }
+    //bai4
+    else if(x==='ひるやすみ '|| x==='びじゅつかん'|| x==='としょかん '|| x==='おわります '||
+    x==='やすみます '||x==='はたらきます'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="220px";
+        
+    }else if(x==='～ふん/～ぷん '||x==='でんわばんごう '|| x==='ゆうびんきょく '
+    || x==='べんきょうします'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="200px";
+    }
+    //bai5
+    if(x==='けんきゅうしゃ'|| x==='かいしゃいん ' || x==='はじめまして ' || x==='ぎんこういん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+        
+    }else if(x==='きょうねん '||x==='じゅうよっか'||x==='らいしゅう '||x==='こんしゅう '
+    ||x==='せんしゅう '||x==='なんじょうび'||x==='じてんしゃ '||x==='しんかんせん'||x==='かえります '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if(x==='にじゅうよっか '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="250px";
+    }
+    // bai 6
+    else if(x==='わかりました'|| x==='いいですね ' || x==='いっしょに ' || x==='しゅくだい '||
+    x==='ぎゅうにゅう'||x==='ばんごはん '||x==='ひるごはん '||x==='あさごはん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    //bai 7
+    else if(x==='おかあさん '|| x==='おとうさん ' || x==='プレゼント ' || x==='クリスマス '||x==='セロテープ '||x==='おしえます '
+    ||x==='ホッチキス '||x==='ねんがじょう'||x==='ならいます '||x==='もらいます '||x==='おくります '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    //bai 8
+    else if(x==='レストラン '|| x==='いそがしい ' || x==='おもしろい ' || x==='むじかしい '
+    ||x==='あたらしい '||x==='セロテープ '||x==='おかあさん '||x==='おとうさん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    
+    //bai9
+    else if(x==='アルバイト '|| x==='ごしゅじん ' || x==='コンサート ' || x==='クラシック '
+    ||x==='わかります '||x==='レストラン '||x==='いそがしい '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+        
+    }else if(x==='おっと・じゅじん'||x==='つま・かない  '||x==='こまかいおかね '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    //bai10
+    else if(x==='おとこのひと'|| x==='おんなのひと' || x==='おんなのこ ' || x==='おとこのこ '||
+    x==='れいぞうこ '||x==='きっさてん '||x==='～や～など '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    //bai11
+    else if(x==='いもうとさん'|| x==='ーしゅうかん' || x==='どのくらい ' || x==='おとうとさん'||x==='あねえさん '
+    ||x==='おにいさん '||x==='きょうだい '||x==='りょうしん '||x==='サンドイッチ'||x==='やすみます '||x==='かかります '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+        
+    }else if (x==='りゅうがくせい '||x==='アイスクリーム '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="250px";
+    }
+    //bai12
+    else if(x==='あたたかい '|| x==='パーティー '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+        
+    }else if (x==='おおいひとが～ '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="250px";
+    }else if (x==='いいコーヒーが～'|| x==='すくないひとが～'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="230px";
+    }
+    //bai13
+    else if(x==='しゅうまつ '|| x==='しやくしょ ' || x==='はいります ' || x==='つかれます '||x==='むかえます '
+    ||x==='およぎます '||x==='あそびます '||x==='さんぽします'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+        
+    }else if (x==='しょくじします '||x==='かいものします '||x==='けっこんします '||x==='けっこんします '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="250px";
+    }
+    //bai14
+    else if(x==='いいですよ '|| x==='じゅうしょ ' || x==='パスポート ' || x==='コピーします'||
+    x==='はじめます '||x==='おしえます '||x==='はなします '||x==='てつだいます'||x==='まがります '||x==='いそぎます '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    //bai15
+    else if(x==='じこくひょう'|| x==='プレイガイド'||x==='つくります ' ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if (x==='けんきゅうします'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    //bai16
+    else if(x==='どうやって '|| x==='ジョギング ' || x==='あたまがいい' || x==='せがたかい '|| x==='のりかえます'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="340px";
+        
+    }else if(x==='やめますかいしゃを～'|| x==='でますだいがくを～ ' || x==='あびますシャワーを～' || x==='おりますでんしゃに～'|| x==='のりますでんしゃに～'){
+        a.style.fontSize='70px';
+        a.innerText = "けんこうほけんしょう";
+        a.style.width="100px";
+        a.style.marginLeft="157px";
+    }
+    else if(x==='りゅうがくせい '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="230px";
+    }
+    //bai17
+    else if(x==='だいじょうぶ'|| x==='でかけます ' || x==='かえします ' || x==='はらいます '
+    || x==='なくします '|| x==='わすれます '|| x==='おぼえます ' || x==='もってきます'|| x==='2,3にち '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if(x==='くすりをのみます'|| x==='しんぱいします ' || x==='もっていきます ' || x==='ざんぎょうします'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    else if(x==='けんこうほけんしょう'|| x==='おふろにはいります ' || x==='しゅっちょうします ' || x==='レポートをだします '){
+        a.style.fontSize='70px';
+        a.innerText = "けんこうほけんしょう";
+        a.style.width="700px";
+        a.style.marginLeft="157px";
+        }
+    //bai18
+    else if(x==='ほんとうですか '|| x==='けんかくします ' || x==='うんてんします ' ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }else if(x==='ぼくじょう ' || x==='―メートル '|| x==='しゃちょう ' || x==='こくさい～ '||
+    x==='よやくします'|| x==='あつめます '||x==='うたいます '||x==='あらいます '|| x === 'それはおもしろいですね '
+    ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";}
+    //bai 19
+    else if(x==='けんきゅうしゃ'|| x==='かいしゃいん ' || x==='はじめまして ' || x==='ぎんこういん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+    }else if(x==='からだにいい' || x==='なんかいも '|| x==='ダイエット ' || x==='おかげさまで'
+    || x==='とまります ' || x==='そうじします'|| x==='のぼります '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";}
+        else if(x==='ちょうしがいい '|| x==='ちょうしがわるい'|| x==='せんたくします '||x==='れんしゅうします')
+    {  
+        a.style.fontSize='80px';
+        a.style.marginLeft="250px";
+    }
+    //bai20
+    else if(x==='しらべます '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    } else if(x==='しゅうりします ' ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    //bai 21
+    else if(x==='～について '|| x==='ほんとうに ' || x==='アルバイト ' || x==='しゅしょう '
+    || x==='おもいます '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if(x==='だいとうりょう '|| x==='やくにたちます ')
+    {  
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    //bai22
+    else if(x==='けんきゅうしゃ'|| x==='かいしゃいん ' || x==='はじめまして ' || x==='ぎんこういん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+    }else if(x==='わたしたち ' || x==='うまれます '|| x==='かぶります ' ){
+        a.style.fontSize='80px';
+        a.style.marginLeft="333px";
+    }
+    //bai23
+    else if(x==='けんきゅうしゃ'|| x==='かいしゃいん ' || x==='はじめまして ' || x==='ぎんこういん '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+    }else if(x==='ちゅうしゃじょう')
+    {  
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    else if(x==='なんかいも ' || x==='こうさてん '|| x==='まがります ' || x==='わたりあす '
+    || x==='あるきます ' || x==='さわります ' || x==='まわします '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    //bai24
+    else if(x==='つれていきます'|| 
+    x==='あんないします' || x==='せつめいします'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="290px";
+        
+    }else if(x==='おくります ' || x==='ホームステイ'|| x==='つれてきます' || x==='おじいさん '
+    || x==='おばあさん ' || x==='なおします '){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }else if(x==='しょうかいします')
+    {  
+        a.style.fontSize='80px';
+        a.style.marginLeft="260px";
+    }
+    //bai 25
+    else if(x==='かんがえます'){
+        a.style.fontSize='80px';
+        a.style.marginLeft="330px";
+    }
+    else{
+        a.style.fontSize='100px';
+  a.style.marginLeft="430px";
+    }
+    if (previousResults.includes(x)) {
+        showText();
+    } else {
+        previousResults.push(x);
+        responsiveVoice.speak(x, 'Japanese Female');
+        a.innerText = x;
+        a.style.width=(x.length *100)+"px";
+        a.style.fontFamily = "Arial";
+    }
+   
+}
+function reloadtrang(){
+            location.reload();
+        }
+            
+		
+</script>
+</html>

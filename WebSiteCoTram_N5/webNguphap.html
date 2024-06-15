@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz đơn giản</title>
+	<style>
+		header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 9px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    z-index: 1;
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+    z-index: 1;
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+ z-index: 1;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+.d1{
+    position: absolute;
+    top: 160px;
+    left: 70px;
+    z-index: 1;
+    width: 485px;
+    height: 40px;
+    border: 3px solid yellow;
+    font-size: 24px;
+    background-color: yellow;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.d1:hover{
+    cursor: pointer;
+}
+.d2{
+    position: absolute;
+    top: 160px;
+    left: 700px;
+    z-index: 1;
+    width: 490px;
+    height: 40px;
+    border: 3px solid yellow;
+    font-size: 24px;
+    background-color: yellow;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: -1;
+}
+.d2:hover{
+    cursor: pointer;
+}
+sub{
+    color:red;
+}
+
+       
+	</style>
+</head>
+<body>
+	<header>
+        <div class="abc">
+            <a href="webTNcoTram.html">
+            <img onclick="reloadtrang()" src="japanse.png">
+            </a>
+            </div>
+        <div class="bottom-left">
+            <nav class="menu">
+            
+            <ul>
+                <li><a href="#" >Sơ Cấp</a></li>
+                <li><a href="#" >Trung Cấp</a></li>
+                <li><a href="#" >N5</a>
+                    <ul>
+                        <li><a href="webVocab.html">Từ Vựng</a></li>
+                        <li><a href="webquiz.html">Ngữ Pháp</a></li>
+                        <li><a href="webgamekanji.html">Kanji</a></li>
+                        <li><a href="#">Chia Thể</a>
+							<ul>
+								<li><a href="webchiathe.html">Chia Thể 1</a></li>
+								<li><a href="#">Chia Thể 2</a></li>
+							</ul>
+						</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N4</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N3</a>
+                   
+                </li>
+                <li>
+                    <a href="#" >N2</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N1</a>
+                    
+                </li>
+                </ul>
+        </div>
+    </header>
+    <article>
+       
+            <details class="d1">
+                <summary>Các mẫu ngữ pháp liên quan đến thể て</summary>
+                <p><b>.V</b><sub>てもいいですか: Xin phép làm việc gì đó</sub></p>
+                <p>このケーキをたべてもいいですか</p>
+                <p><b>V</b><sub>てはいけません: Cấm/ Không được phép.</sub></p>
+                <p> ここでたばこをすってはいけません</p>
+                <p><b>.V</b><sub>ています: Tình trạng đang diễn ra</sub></p>
+                <p> わたしはほんをよんでいます</p>
+                <p><b>.V</b><sub>てください: Đề nghị, yêu cầu ai đó làm gì</sub></p>
+                <p>にほんごで  はなしてください。</p>
+                <p><b>.V</b><sub> ~て~、Dùng để nối câu, diễn đạt các hành động nối tiếp nhau</sub></p>
+                <p>ひるごはんをたべて、うちにかえります</p>
+                <p><b>.V</b><sub>～てから、～:  Sau khi (xong việc gì đó), thì làm việc khác</sub></p>
+                <p>がっこうがおわってから、アルバイトをしました。</p>
+            </details>
+            <details class="d2">
+                <summary>Các mẫu ngữ pháp liên quan để thể ない</summary>
+                <p><b>Vな</b><sub>なければなりません: Phải</sub></p>
+                <p>薬を飲まなければなりません</p>
+                <p><b>Vな</b><sub>なくてもいいです~:Không cần V cũng được</sub></p>
+                <p>しなくてもいいです</p>
+                
+            </details>
+            <details class="d3">
+                <summary>Các mẫu ngữ pháp liên quan để thể る</summary>
+                <p><b>Vる</b><sub>ことができます</sub></p>
+                <p>ビールを飲むことができます</p>
+                <p><b>Vる</b><sub>ことができない</sub></p>
+                <p>お酒を飲むことができない</p>
+                <p><b>Vる</b><sub>私の臭味はⅤることです</sub></p>
+                <p>私の臭味はビアノをひくことです</p>
+                <p><b>Vる・Nの・thời gian</b><sub>まえに~:Không cần V cũng được</sub></p>
+                <p>寝る前に友達と話します</p>
+                <p>食事の前に手をあらいます</p>
+                <p>五年まえに日本へ行きました</p>
+                
+            </details>
+            <details class="d4">
+                <summary>Các mẫu ngữ pháp liên quan để thể た</summary>
+                <p><b>Vた</b><sub>ことがあります</sub></p>
+                <p>日本へ行ったことがあります</p>
+                <p><b>Vた</b><sub>たり・たり</sub></p>
+                <p>ご飯を食べたり、ねたりします</p>
+                
+                
+            </details>
+           
+  
+       
+    </article>
+   
+</body>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="icon" type="image/png" href="Mina N5/cherry-blossom.png">
+</head>
+<style>
+    header{
+        width: 100%;
+        height: 70px;
+        background-color: rgb(145, 145, 228);
+        position: relative;
+    }
+    header .bottom-left{
+    top:20px;
+    left: 370px;
+    position: absolute;
+    font-size: 20px;
+    
+    }
+    header .bottom-left a{
+        text-decoration: none;
+    color: white;
+    line-height: 20px;
+    padding: 40px;
+    }
+    header .bottom-left a:hover{
+        text-decoration: underline orange;
+        
+    }
+    header .abc img{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 9px;
+    left: 100px;
+    float: left;
+    border-radius: 50%;
+    
+}
+.menu>ul>li{
+    display: inline-block;
+    position: relative;
+}
+.menu>ul>li>a{
+    display: block;
+}
+.menu ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.menu ul li a{
+    text-decoration: none;
+    
+    color: white;
+    padding: 0 32px;
+    line-height: 30px;
+}
+.menu ul li a:hover{
+   
+    text-decoration: underline;
+   
+    
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+   
+  
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    
+}
+.menu ul ul a{
+    display: block;
+    line-height:30px;
+color:black;
+ text-decoration:none;
+ 
+ font-size:large;
+ padding:5px 10px;
+}
+.menu>ul>li:hover>ul{
+    display: block;
+}
+.menu ul ul a:hover{
+    background-color: rgb(145, 145, 228);
+    color: white;
+    text-decoration: none;
+}
+article .p1{
+    padding-top: 20px;
+    float: left;
+    padding-left: 20px;
+}
+aside .p2{
+    padding-top: 20px;
+    float: left;
+    padding-left: 40px;
+}
+aside .imghinh{
+    padding-top: 55px;
+    float: left;
+    padding-left: 40px;
+}
+body{
+    /* background-image: url(dora.jpg); */
+    background-color: rgb(234, 237, 239);
+}
+.menu ul ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  ul {
+    display: block;
+	  position: absolute; 
+     top: 80px;
+    left: 150px;   
+
+}
+.menu ul ul .kanjix{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.menu ul li ul li:hover >  .kanjix {
+    display: block;
+	  position: absolute; 
+     top: 40px;
+    left: 150px;   
+
+}
+
+</style>
+<body>
+    <header>
+        <div class="abc">
+            <img onclick="reloadtrang()" src="japanse.png">
+            </div>
+        <div class="bottom-left">
+            <nav class="menu">
+            
+            <ul>
+                <li><a href="#" >Sơ Cấp</a></li>
+                <li><a href="#" >Trung Cấp</a></li>
+                <li><a href="#" >N5</a>
+                    <ul>
+                        <li><a href="webVocab.html">Từ Vựng</a>
+                        </li>
+                        <li><a href="#">Kanji</a>
+                            <ul class="kanjix">
+								<li><a href="webgamekanji.html">Game Kanji</a></li>
+								<li><a href="webkanji.html">Đọc Kanji</a></li>
+							</ul>
+                        </li>
+                        <li><a href="webNP.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Chia Thể</a>
+                            <ul>
+								<li><a href="webchiathe.html">Chia Thể 1</a></li>
+								<li><a href="webchiathe2.html">Chia Thể 2</a></li>
+							</ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N4</a>
+                    <ul>
+                        <li><a href="webVocabN4.html">Từ Vựng</a>
+                        </li>
+                        <li><a href="#">Kanji</a>
+                    <ul class="kanjix">
+                        <li><a href="webgamekanjiN4.html">Game Kanji</a></li>
+                        <li><a href="webkanjiN4.html">Đọc Kanji</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="webquizN4.html">Ngữ Pháp</a></li>
+                    <li><a href="#">Chia Thể</a>
+                      <ul>
+                        <li><a href="webchiatheN4.html">Chia Thể 1</a></li>
+                        <li><a href="webchiathe2N4.html">Chia Thể 2</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#" >N3</a>
+                    <ul>
+                        <li><a href="webVocabN3.html">Từ Vựng</a>
+                           
+                        </li>
+                        <li><a href="#">Kanji</a>
+                          <ul class="kanjix">
+                            <li><a href="webgamekanjiN3.html">Game Kanji</a></li>
+                            <li><a href="webkanjiN3.html">Đọc Kanji</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="webNP.html">Ngữ Pháp</a></li>
+                        <li><a href="#">Chia Thể</a>
+                          <ul>
+                            <li><a href="webchiatheN3.html">Chia Thể 1</a></li>
+                            <li><a href="webchiathe2N3.html">Chia Thể 2</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" >N2</a>
+                    
+                </li>
+                <li>
+                    <a href="#" >N1</a>
+                    
+                </li>
+                </ul>
+        </div>
+    </header>
+    <article>
+        <div class="p1">
+            <img id ='img'src="img1.jpg" alt="" width="630px" height="450px">
+        </div>
+        
+    </article>
+    <aside>
+        <div class="p2">
+            <!-- <img src="" width="550px" height="190px"> -->
+        </div>
+        <div class="imghinh">
+            <a href="webgioithieu.html">
+                <img src="logocoTram.jpg" width="550px" height="350px">
+            </a>
+        </div>
+       
+    </aside>
+    <script>
+        {
+            var index=1;
+        changeImage=function(){
+            var imgs=['img1.jpg', 'img2.jpg', 'img3.jpg','img4.jpg','img5.jpg','img6.jpg'];
+            document.getElementById('img').src=imgs[index];
+            index++;
+            if(index==6){
+                index=0;
+            }
+        }
+        setInterval(changeImage,1220);
+        }
+    </script>
+</body>
+</html>
